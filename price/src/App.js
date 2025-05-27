@@ -19,7 +19,7 @@ function App() {
   const fetchDefaultProducts = async () => {
     try {
       // You can define a default query like "popular" or empty string, or a backend API endpoint that returns default products
-      const response = await fetch(`http://localhost:5000/api/products?query`);
+      const response = await fetch(`https://pricesnap.onrender.com/api/products?query`);
       const data = await response.json();
       setResults(data);
     } catch (error) {
@@ -29,7 +29,7 @@ function App() {
   // Fetch products with sorting params
   const fetchProducts = async (searchTerm, sortByParam = '', sortOrderParam = 'asc') => {
     try {
-      const response = await fetch(`http://localhost:5000/api/products?query=${encodeURIComponent(searchTerm)}&sort_by=${sortByParam}&sort_order=${sortOrderParam}`);
+      const response = await fetch(`https://pricesnap.onrender.com/api/products?query=${encodeURIComponent(searchTerm)}&sort_by=${sortByParam}&sort_order=${sortOrderParam}`);
       const data = await response.json();
       setResults(data);
     } catch (error) {
