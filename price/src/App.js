@@ -54,6 +54,7 @@ function App() {
   return (
     <div className="App">
       <h1>🛍️ PriceSnap</h1>
+      <h2>Skincare Products(Moisturizer,cleanser,etc,..)</h2>
       <SearchBar onSearch={handleSearch} />
 
       {product && (
